@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import EventBus from './EventBus';
-import modal from './modal';
+import modal from '.';
 import App from './App.vue';
 
 const app = createApp(App);
