@@ -2,12 +2,12 @@
     <div id="modal-parent">
 
     </div>
-    <modal parentNode="#modal-parent" :modalName="modalName">
+    <modal parentNode="#modal-parent" :modalName="modalName" @before-open="beforeOpen" @before-close="beforeClose" :disabled="true">
         <div class="green-box"></div>
     </modal>
-    <button @click="showModal">모달 열기!</button>
-    <button @click="hideModal">모달 닫기!</button>
-    <button @click="hideAllModal">모달 전부 닫기!</button>
+    <button @click="showModal">Open Modal!</button>
+    <button @click="hideModal">Hide Modal!</button>
+    <button @click="hideAllModal">Hide All Modal!</button>
 </template>
 
 <script>
@@ -30,6 +30,12 @@ export default {
         },
         hideAllModal() {
             this.$modal.hideAll();
+        },
+        beforeOpen(msg) {
+            console.log(msg)
+        },
+        beforeClose(msg) {
+            console.log(msg)
         }
     }
 }

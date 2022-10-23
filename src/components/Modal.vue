@@ -1,5 +1,5 @@
 <template>
-    <teleport v-if="isShowModal" :to="parentNode" :disabled="false">
+    <teleport v-if="isShowModal" :to="parentNode" :disabled="disabled">
         <slot/>
     </teleport>
 </template>
@@ -19,6 +19,10 @@ export default {
         modalName: {
             type: String,
             required: true
+        },
+        disabled: {
+            type: Boolean,
+            default: false
         }
     },
     created() {
