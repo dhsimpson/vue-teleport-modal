@@ -1,7 +1,7 @@
 {
   "name": "vue-teleport-modal",
   "main": "src/index.js",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "dhsimpson <qeadzc9503@naver.com>",
   "repository": {
       "type": "git",

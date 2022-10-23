@@ -35,11 +35,17 @@ export default {
             if(this.modalName == modalName) {
                 if(this.isShowModal == state) return;
                 if(state){
-                    this.$emit('before-open', 'open!');
+                    this.$emit('before-open', this.createModalEvent({state: 'before-open'}));
                 }else {
-                    this.$emit('before-close', 'close!');
+                    this.$emit('before-close', this.createModalEvent({state: 'before-close'}));
                 }
                 this.isShowModal = state;
+            }
+        },
+        createModalEvent(args= {}) {
+            return {
+                name: this.modalName,
+                ...args
             }
         }
     }
