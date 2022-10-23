@@ -89,3 +89,13 @@ export default {
     <Your Html>
 </modal>
 ```
+
+
+<hr/>
+
+## Version
+ex) 0.1.3-2 (first.second.third-fourth)
+ - first : When 'second' exceed 9 or Big usage change, increase 'first'   
+ - second :  When 'third' exceed 9, increase 'second'   
+ - third : When add methods or refactor code, increase 'third'   
+ - fourth : When correct typo or change of comment
