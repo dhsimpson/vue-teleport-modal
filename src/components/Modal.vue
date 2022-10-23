@@ -23,13 +23,21 @@ export default {
     },
     created() {
         this.$modal.regist(this.modalName);
-
-        this.$eventBus.$on('toggle-modal', (...args) => {
+        this.$eventBus.$on('toggle-modal', (...args) => this.toggleModalCallback(args))
+    },
+    methods: {
+        toggleModalCallback(args) {
             const [modalName, state] = args
             if(this.modalName == modalName) {
-                this.isShowModal = state            
+                if(this.isShowModal == state) return;
+                if(state){
+                    this.$emit('before-open', 'open!');
+                }else {
+                    this.$emit('before-close', 'close!');
+                }
+                this.isShowModal = state;
             }
-        })
+        }
     }
 }
 </script>
