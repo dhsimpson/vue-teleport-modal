@@ -9,7 +9,7 @@ and [main.js]('./src/main.js')
 ('vue-teleport-modal' call eventBus API through '$eventBus')
 
 ```
-ex) below is what happened insed method 'this.$modal.show'
+ex) below is what happened inside method 'this.$modal.show'
 this.$eventBus.$emit('toggle-modal', 'modalName', true)
 ```
    
