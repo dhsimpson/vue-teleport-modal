@@ -1,7 +1,9 @@
 import { createApp } from 'vue'
 import EventBus from './EventBus';
-import App from './App.vue'
+import modal from './modal';
+import App from './App.vue';
+
 const app = createApp(App);
-// app.provide('EventBus', EventBus);
 app.use(EventBus);
+app.use(modal);
 app.mount('#app')
