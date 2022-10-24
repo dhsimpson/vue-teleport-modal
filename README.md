@@ -2,8 +2,8 @@
 
 ## Before use 'vue-teleport-modal', you have to install and apply 'EventBus'
 
-check [eventBus]('./src/EventBus.js')
-and [main.js]('./src/main.js')      
+check [eventBus](/src/EventBus.js)
+and [main.js](/src/main.js)      
 
 **Note that** you have to regist name of EventBus as '$eventBus'.   
 ('vue-teleport-modal' call eventBus API through '$eventBus')
