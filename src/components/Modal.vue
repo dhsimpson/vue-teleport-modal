@@ -31,11 +31,11 @@ export default {
     },
     methods: {
         toggleModalCallback(args) {
-            const [modalName, state] = args
+            const [modalName, state, params] = args
             if(this.modalName == modalName) {
                 if(this.isShowModal == state) return;
                 if(state){
-                    this.$emit('before-open', this.createModalEvent({state: 'before-open'}));
+                    this.$emit('before-open', this.createModalEvent({state: 'before-open', params}));
                 }else {
                     this.$emit('before-close', this.createModalEvent({state: 'before-close'}));
                 }

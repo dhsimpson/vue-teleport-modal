@@ -7,8 +7,8 @@ export default {
     install(app, options= {}) {
 
         app.config.globalProperties.$modal = {
-            show(modalName) {
-                app.config.globalProperties.$eventBus.$emit('toggle-modal', modalName, true);
+            show(modalName, params) {
+                app.config.globalProperties.$eventBus.$emit('toggle-modal', modalName, true, params);
             },
             hide(modalName) {
                 app.config.globalProperties.$eventBus.$emit('toggle-modal', modalName, false);
